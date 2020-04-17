@@ -1,0 +1,18 @@
+import { compose } from "recompose";
+import { connect } from "react-redux";
+
+import NAMEView from "./NAMEView";
+import { thunkFunc } from "./NAMEState";
+
+export default compose(
+  connect(
+    (state) => ({
+      stateOne: state.stateOne,
+      stateTwo: state.stateTwo,
+      stateThree: state.stateThree,
+    }),
+    (dispatch) => ({
+      thunkFunc: (arg) => dispatch(thunkFunc(arg)),
+    })
+  )
+)(NAMEView);
