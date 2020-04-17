@@ -45,19 +45,19 @@ module.exports = function (plop) {
     actions: [
       {
         type: "add",
-        path: "./{{name}}/Route/index.js",
+        path: "./Modules/{{name}}/Route/index.js",
         templateFile: "plop-templates/RouteTemplate.hbs",
         abortOnFail: true,
       },
       {
         type: "add",
-        path: "./{{name}}/Model/index.js",
+        path: "./Modules/{{name}}/Model/index.js",
         templateFile: "plop-templates/ModelTemplate.hbs",
         abortOnFail: true,
       },
       {
         type: "add",
-        path: "./{{name}}/Helpers/index.js",
+        path: "./Modules/{{name}}/Helpers/index.js",
         templateFile: "plop-templates/HelperTemplate.hbs",
         abortOnFail: true,
       },
