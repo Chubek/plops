@@ -98,7 +98,7 @@ module.exports = function (plop) {
         type: "modify",
         path: "./Middleware/{{name}}.js",
         transform(fileContents, data) {
-          return fileContents.replace(/Placeholder/g, name);
+          return fileContents.replace(/Placeholder/g, data.name);
         },
       },
     ],
@@ -131,7 +131,7 @@ module.exports = function (plop) {
         type: "modify",
         path: "./Services/Mailer.js",
         transform(fileContents, data) {
-          return fileContents.replace(/Placeholder/g, email);
+          return fileContents.replace(/Placeholder/g, data.email);
         },
       },
     ],
