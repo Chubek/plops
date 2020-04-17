@@ -63,7 +63,7 @@ module.exports = function (plop) {
       },
       {
         type: "modify",
-        path: "./{{name}}/Model/index.js",
+        path: "./Modules/{{name}}/Model/index.js",
         transform(fileContents, data) {
           return fileContents.replace(/Placeholder/g, name);
         },
