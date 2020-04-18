@@ -3,6 +3,8 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import PropTypes from "prop-types";
+import * as React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 export default class NAMEView extends Component {
 componentWillMount() {}
@@ -10,6 +12,7 @@ componentDidMount() {}
 componentWillUnmount() {}
 
 render() {
+const { navigation, screenName }= this.props;
 return (
 <View style={styles.container}>
     <Text> This is the NAME component. </Text>
