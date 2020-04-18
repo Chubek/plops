@@ -67,6 +67,39 @@ module.exports = function (plop) {
     ],
   });
 
+  plop.setGenerator("create-component", {
+    description: "Creates component.",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        validate: (v) => {
+          const pattern = /[A-Z][a-zA-Z]+/;
+          if (pattern.test(v)) {
+            return true;
+          }
+          return "First letter must be capitalized. Can't contain numbers or special characters.";
+        },
+        message:
+          "Component name. Must be capitalized and can't contain numbers.",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "./src/components/{{name}}.js",
+        templateFile: "plop-templates/StatelessComponentTemplate.hbs",
+      },
+      {
+        type: "modify",
+        path: "./src/components/{{name}}.js",
+        transform(fileContents, data) {
+          return fileContents.replace(/NAME/g, data.name);
+        },
+      },
+    ],
+  });
+
   plop.setGenerator("create-redux", {
     description: "Creates redux folder.",
     prompts: [],
