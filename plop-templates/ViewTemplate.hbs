@@ -12,7 +12,7 @@ componentDidMount() {}
 componentWillUnmount() {}
 
 render() {
-const { navigation, screenName }= this.props;
+const navigation = useNavigation();
 return (
 <View style={styles.container}>
     <Text> This is the NAME component. </Text>

@@ -1,16 +1,20 @@
 /* Authored by Chubak Bidpaa: chubakbidpaa@gmail.com - 2020 - Corona Times */
-
+import React, {Component} from "react"
 import { StyleSheet, View, Text } from "react-native";
 import PropTypes from "prop-types";
+import {Button} from "native-base"
 
-export default function NAMEComponent() {
+export default class NAMEComponent extends Component {
 
+state = {};
+
+render() {
 return (
 
 <Text style={styles.text}> This is the NAME component. </Text>
-
+<Button onPress={()=> { this.setState({ })><Text> Text </Text></Button>
 );
-
+}
 }
 
 const styles = StyleSheet.create({

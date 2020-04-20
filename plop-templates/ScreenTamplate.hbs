@@ -3,12 +3,13 @@
 import { StyleSheet, View, Text } from "react-native";
 import PropTypes from "prop-types";
 
-export default function NAMEComponent() {
+
+export default function NAMEScreen({navigation}) {
 
 return (
-
-<Text style={styles.text}> This is the NAME component. </Text>
-
+<View>
+<Text style={styles.text}> This is the NAME screen. </Text>
+</View>
 );
 
 }
@@ -22,6 +23,6 @@ paddingHorizontal: 30,
 },
 });
 
-NAMEComponent.propTypes = {
+NAMEScreen.propTypes = {
 children: PropTypes.element.isRequired,
 };
